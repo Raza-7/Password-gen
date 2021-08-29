@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            background-color: rgb(8, 190, 99);
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .conta{
+        background-color: rgb(238, 237, 237);
+        border-radius: 4px;
+         width: 30rem; 
+         height: auto;
+    }
+
+    .form-control small{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+    }
+    .head h2{text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    }
+
+    .form{
+        
+    }
+
+    .form-control{
+      
+    }
+
+    input{
+        width: 17rem;
+        border-radius: 5px;
+        height: 1.4rem;
+        font-size: 1rem;
+        margin: 13px;
+        outline: none;
+        border: 1px solid palegreen;
+    }
+
+    button{ margin: 18px;
+        border-radius: 4px;
+        padding: 10px;
+        color: rgb(16, 17, 17);
+        background-color: rgb(6, 201, 71);
+        outline: none;
+ }
+    </style>
+</head>
+<body>
+    <div class="conta">
+        <div class="head">
+            <h2>Create an Account</h2>
+            <center>
+            <form class="form" id="form">
+                <div class="form-control">
+                  <label for="">name</label>
+                  <input type="text" id="name">
+                
+                  <small>error msg</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="">email</label>
+                    <input type="text" id="email">
+                
+                    <small>error msg</small>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="">password</label>
+                    <input type="text" id="pass">
+                   
+                    <small>error msg</small>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="">check pass</label>
+                    <input type="text" id="passchk">
+                   
+                    <small>error msg</small>
+                  </div>
+                  <button>submit</button>
+            </form>
+        </center>
+        </div>
+    </div>
+
+
+    <script>
+        const form= document.getElementById('form')
+        const name= document.getElementById('name')
+        const email= document.getElementById('email')
+        const password= document.getElementById('pass')
+        const passchk= document.getElementById('passchk')
+
+
+        const userval=name.value;
+        if(userval=== ''){
+        
+        }
+    </script>
+</body>
+</html>

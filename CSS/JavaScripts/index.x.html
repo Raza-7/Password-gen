@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascripts</title>
+</head>
+<body>
+   <h2>master Javascript</h2> 
+
+   <script>
+async function Getcovid(){
+
+        const jsondata= await fetch('https://api.covid19api.com/summary')
+    const actData=await jsondata.json()
+   // console.log(actData.Countries[76])
+let data = actData.Countries[76]
+let Cname= data.Country;
+console.log(Cname)
+console.log(data.TotalConfirmed)
+console.log(data.TotalDeaths)
+document.write("total case", data.TotalConfirmed)
+}
+    
+   
+ Getcovid()
+   </script>
+</body>
+</html>

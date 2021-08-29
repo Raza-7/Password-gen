@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo</title>
+</head>
+
+<body>
+
+    <h1>todo list</h1>
+    <script>
+        const Todos = [
+            { title: 'go for walk', done: true },
+
+            { title: 'finish upskill lecture', done: false },
+
+            { title: 'scrumm call', done: true },
+
+            { title: 'code reviwe', done: true },
+
+            { title: 'fix bug', done: false }
+        ]
+        const addTodo = (todo, done) => {
+            Todos.push({ title: todo, done: done })
+            console.log("todo added succesfully")
+
+        }
+        addTodo('Hit the gym', true);
+
+        const displayTodo = () => {
+            for (let i = 0; i < Todos.length; i++) {
+                let todoItems = Todos[i];
+                //  return console.log(' ${i+1}. todos: ${todoItems.title} || done: ${todoItems.done}')
+                console.log(todoItems)
+            }
+        }
+        displayTodo()
+
+        const delTodo = (title) => {
+
+            let deltodoIndx = Todos.findIndex((todo) => {
+                return todo.title = title
+            });
+
+            Todos.splice(deltodoIndx, 1);
+            console.log('');
+            console.log('todo deleted successs')
+
+            displayTodo()
+        }
+        delTodo('go for walk');
+
+
+        const updateTodo = (oldTodo, newTodo) => {
+            let todoUpIndex = Todos.findIndex((todo) => {
+                todo.title === oldTodo;
+            })
+            Todos[todoUpIndex] = newTodo;
+            console.log('');
+            console.log('todo 5 is updated');
+            displayTodo()
+
+        }
+        updateTodo('Hit the gym', 'getup and get fresh');
+
+        function searchTodo(title) {
+            let searchTodoIndex = Todos.findIndex((todo) => {
+                return todo.title === title;
+
+            })
+            // .write(Todos[searchTodoIndex])
+            console.log(Todos[searchTodoIndex]);
+
+        }
+
+
+        console.log('searching...')
+        searchTodo('fix bug');
+        document.write()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1></h1>
+        <ol></ol>
+    </div>
+      
+
+    <p></p>
+
+    
+   <script>
+       let bdyBg= document.querySelector('body');
+       bdyBg.style.backgroundColor='skyblue';
+ 
+       //modifying elements of div with vDom
+
+       let div= document.querySelector('div');
+        div.innerHTML='hiiii';
+        div.style.color= 'lightgreen'
+
+       
+      let h1=document.createElement('h1');
+      h1.textContent="hellow v DOM";
+      div.appendChild(h1)
+    // let root= document.querySelector('ol');
+       let li=document.createElement('li');
+       li.textContent='a list goes here';
+       div.appendChild(li);
+
+       let li2=document.createElement('li');
+       li2.textContent='hellp';
+       div.appendChild(li2)
+
+       //modifying para with js
+ let p=document.querySelector('p')
+       p.innerHTML='lorem20';
+
+       //creating element in para
+
+       let span=document.createElement('span');
+       span.textContent='wow';
+       p.appendChild(span)
+       span.style.color='red'
+
+       //bold content 
+
+       let bold=document.createElement('b');
+       bold.textContent='me';
+       p.appendChild(bold)
+
+
+
+       var myname= 'jss';
+       console.log('myname', myname);
+       
+   </script> 
+</body>
+</html>

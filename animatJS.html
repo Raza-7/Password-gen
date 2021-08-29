@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animJs</title>
+    <style>
+       body{
+        height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+           background-color: #5dafb8;
+           color: wheat;
+           font-family: Georgia, 'Times New Roman', Times, serif; 
+       } 
+       h1{
+           text-shadow: 7px 8px 6px rgba(0,0,0,0.3);
+           font-size: 34px;
+           font-weight: 900;
+       }
+
+         span{
+             opacity: 0;
+             transition: all 1s ease;
+             transform: translateY(50px);
+             display: inline-block;
+         }
+         span.fed{opacity: 1;
+         transform: translateY(0);}
+    </style>
+</head>
+<body>
+    <h1 class="anim">Hello World</h1>
+
+    <script>
+        let text= document.querySelector('.anim');
+        const strText=text.textContent;
+        console.log(strText);
+        const spltText=strText.split('');
+        console.log(spltText);
+        text.textContent='';
+
+        for(let i=0; i<spltText.length;i++){
+            text.innerHTML+='<span> ' +  spltText[i] + '<span>';
+        }
+
+        let char=0;
+        let timer=setInterval(onTick,100)
+       function onTick(){
+           const span=text.querySelectorAll('span')[char];
+           span.classList.add('fed');
+           char++
+
+           if(char === spltText.length){
+               
+               return null;
+           }
+           
+       }
+  
+</script>
+</body>
+</html>

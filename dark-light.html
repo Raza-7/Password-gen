@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark/light</title>
+
+    <style>
+        .dark-mode{background-color: rgb(56, 49, 49);
+        color: whitesmoke;
+        }
+        button{padding: 6px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 18px;
+        }
+        .dark{display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-family: cursive;
+        font-weight: 900;
+     
+        }
+    </style>
+</head>
+<body class="light">
+    <button onclick="toggle()">dark/light</button>
+    <div class="cont">
+    <h1> toggle dark/light</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed, mollitia quis nostrum optio quo a ab asperiores laudantium vitae. Quis, placeat pariatur tenetur sunt explicabo ab hic excepturi cum!
+</div>
+
+    <div class="dark">
+     <h1>good night
+     </h1>
+
+ </div>
+
+    <script>
+       var ev= document.querySelector('.light');
+       var evDark= document.querySelector('.dark');
+       var btn= document.querySelector('.button');
+         
+    
+       function toggle(){
+        ev.classList.toggle('dark-mode');
+           if(evDark.style.display !='none'){
+         evDark.style.display='block';
+           }
+           else{evDark.style.display='none';}
+           
+           }
+ 
+       
+    </script>
+</body>
+</html>

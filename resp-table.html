@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table-responsive</title>
+
+    <style>
+  *{padding: 0; box-sizing: border-box;}
+
+  body{background-color: burlywood; font-family: sans-serif;}
+  .cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    
+  }
+  h1{font-size: 35px;color: chocolate;}
+  .table-cont{border-collapse: collapse; width: 75%;
+  box-shadow: 0 4px 7px 2px rgba(0,0,0,0.3);
+  
+  }
+  thead tr{background-color: darkgoldenrod;
+  height: 40px;
+  }
+  thead tr th{font-size: 16px;
+ 
+letter-spacing: 0.37px;
+color: silver;
+border: 1px solid silver;
+
+
+  }
+
+
+  .table-cont tbody tr td{background-color:rgb(241, 104, 50);
+  color: rgb(241, 222, 225);
+  text-align: center;
+  border: 1px solid silver;
+  }
+   tbody tr td #s5{color: red; font-weight: bold;
+   padding: 7px;}
+
+   @media ( max-width:1268px){
+       table tbody tr{font-size: 26px;}
+    table thead
+       {
+       display: none;
+       }
+       table, table tbody, table tr, table td{display: block;
+       width: 100%;
+       }
+       table tr{margin-bottom: 20px;}
+   }
+     tbody tr td{
+     text-align: right;
+     position: relative;
+     }
+   table tr td:before{
+       content: attr(data-table);
+       position: absolute;
+       left: 10px;
+   }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Risponsive table </h1>
+    <table class="table-cont">
+    <thead>
+    <tr>
+    <th>same1</th>
+    <th>same2</th>
+    <th>same3</th>
+    <th>same4</th>
+    <th>same5</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td data-table="sss">value1</td>
+    <td data-table="sss">value1</td>
+    <td data-table="sss">value1</td>
+    <td data-table="sss">value1</td>
+    <td data-table="sss" id="s5">value1</td>
+    </tr>
+    <tr class="active">
+    <td data-table="sss">value2</td>
+    <td data-table="sss">value2</td>
+    <td data-table="sss">value2</td>
+    <td data-table="sss">value2</td>
+    <td data-table="sss" id="s5">value2</td>
+    </tr>
+    <tr>
+    <td data-table="sss">value3</td>
+    <td data-table="sss">value3</td>
+    <td data-table="sss">value3</td>
+    <td data-table="sss">value3</td>
+    <td data-table="sss" id="s5">value3</td>
+    </tr>
+    <tr>
+    <td data-table="sss">value4</td>
+    <td data-table="sss">value4</td>
+    <td data-table="sss">value4</td>
+    <td data-table="sss">value4</td>
+    <td data-table="sss">value4</td>
+    </tr>
+    <tr class="last">
+    <td data-table="sss">value5</td>
+    <td data-table="sss">value5</td>
+    <td data-table="sss">value5</td>
+    <td data-table="sss">value5</td>
+    <td data-table="sss" id="s5">value5</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

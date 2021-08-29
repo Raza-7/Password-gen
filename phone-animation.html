@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pulsing effect</title>
+    <style>
+*{ margin: 0; box-sizing: border-box;}
+body{background-color: #dddddd;
+height: 100vh;
+display: flex;
+/* align-items: center; */
+justify-content: center;
+margin-top: 15%;
+}
+
+.circle{background-color: rgba(52,211,102,1);
+height: 100px;
+width: 100px;
+border-radius:50% ;
+display: grid;
+place-items: centre;
+animation: pulse 1s infinite;
+}
+.fas{font-size: 34px; color: whitesmoke;}
+@keyframes pulse{
+    /* 0%{transform: scale(0.9); box-shadow: 0 0 0 5px rgba(0,0,0,0.1);} */
+
+    0%{transform: scale(0.7);box-shadow: 0 0 0 0 rgba(50, 66, 54, 0.1); }
+
+    100%{transform: scale(0.9);box-shadow: 0 0 0 12px rgba(50, 66, 54, 0.1);}
+    
+}
+    </style>
+    <link rel="stylesheet" href="" >
+</head>
+<body>
+    <div class="circle">
+        <i class="fas fa-phone-volum">ph</i>
+    </div>
+</body>
+</html>

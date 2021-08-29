@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        :root{--text-color: black;
+        --text-size:17px;
+        --text-family: georgia;
+          --background:#cccccc;
+        }
+        body{background-color: var(--background);}
+        .cont{
+           background-color: #2ecc71;
+           display: block;
+           margin: auto; 
+           width: 50%;
+
+            color: var(--text-color);
+            font-size: var(--text-size);
+            font-family: var(--text-family);
+        }
+        html{scroll-behavior: smooth;}
+        div.cont::first-letter{font-size: 50px;color: green;}
+        div.cont::before{
+            content: 'Some lorem texts';
+            color: darkkhaki;
+            font-weight: bolder;
+        }
+        div.cont::after{
+            content: 'those were some lorem text';
+            color:  lightgreen;
+            font-size: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt molestiae corporis nemo fugiat optio non et suscipit quis! Quia!
+    </div>
+</body>
+</html>

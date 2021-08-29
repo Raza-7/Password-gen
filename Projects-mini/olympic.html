@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Rings</title>
+
+    <style>
+        .cont{ 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+             
+            transform: rotate(90deg);
+            scroll-behavior: smooth;
+        }
+        
+        div{height: 12.5rem;
+        width: 12.5rem;
+        border: 3px solid;
+        border-radius: 50%;
+        margin: 1rem;
+        }
+        .red{
+           color: red;
+        }
+        .black{color: black;
+        position: relative;
+        z-index: 1000;
+        }
+        .blue{color: blue;}
+        .green{color: green;}
+        .yellow{color: yellow;}
+          .top{
+              margin-top: 25px;
+              animation: top 5s 1;
+          }
+
+          @keyframes top {
+              0%{transform: translate(-450px);}
+
+              100%{transform: translate(0);}
+              
+          }
+        .bottom{
+        position: relative;
+        right: 8.125rem;
+        animation: bottom  4s;
+    }
+    @keyframes bottom {
+        0%{transform: translate(500px);}
+        100%{transform:translate(0);}
+        
+    }
+
+    @media screen and (max-width:786px) {
+        div{width: 130px; height: 130px;}
+
+        .bottom{right: 7rem;}
+        
+    }
+    @media screen and(max-width:540px){
+        div{width: 50px; height: 50px;}
+        .bottom{right: 3rem;}
+        
+    }
+    h1{font-size: 34px;
+       color: lightslategray;
+       text-shadow: 0 4px 5px  rgba(0, 0,0, 0.4); 
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      animation: h1 1s 1;
+      text-align: center;
+      top: 17px;
+}
+
+@keyframes h1 {
+    0%{transform: translateX(-500px); opacity: .7;}
+    100%{transform:translate(0) ;}
+}
+
+    </style>
+</head>
+<body>
+    <h1>International Olympic Comittee</h1>
+   <section class="cont">
+    
+<section class="top">
+    <div class="red"></div>
+    <div class="black"></div>
+    <div class="blue"></div>
+
+</section>
+
+<section class="bottom">
+    <div class="green"></div>
+    <div class="yellow"></div>
+</section>
+
+
+   </section> 
+</body>
+</html>

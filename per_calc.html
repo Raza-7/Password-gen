@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>enter amount</h3>
+   <input type="text" id="amt">
+   <h3>enter tip percent</h3>
+   <input type="text" id="per">
+   <button id="btn">calculate</button>
+   <h4 id="res"></h4>
+
+   <script>
+var amount=document.getElementById('amt')
+var percnt=document.getElementById('per')
+var calt=document.getElementById('btn')
+var result=document.getElementById('res')
+
+calt.addEventListener('click',function(){
+    
+
+    //  amount=parseFloat(amount);
+    // percnt=parseFloat(percnt)
+    var tipamt= (amount*percnt)/100;
+     document.write(tipamt);
+    console.log(amount+percnt)
+})
+   </script>
+</body>
+</html>

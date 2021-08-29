@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <script>
+        const myFun=()=>{
+            let val= 3;
+            console.log(val);
+        
+        const myFun2=()=>{
+            // var val2=5;
+            console.log(val+=1)
+        }
+        return myFun2;
+    }
+       let result= myFun();
+       document.write(result);
+       console.log(result)
+
+       result();
+       result();
+       result();
+    </script>
+    <div>
+        <h1>this was closure</h1>
+    </div>
+</body>
+</html>

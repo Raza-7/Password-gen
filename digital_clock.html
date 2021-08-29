@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>degital-clock</title>
+    <style>
+        body{
+       height: 100vh;     
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 10%;
+      margin-left: 25%;
+      background:#dddddd ;      
+        }
+        .wrap{background:rgba(0,0,0,0.8);
+        color: whitesmoke;
+        width: 600px;
+        height: 460px;
+        border: 2px solid black;
+    
+        border-top-right-radius: 7px;
+        
+        text-align: center;
+        box-shadow: 0 4px 7px 4px rgba(0,0,0,0.5), 0 4px 6px 4px rgba(0,0,0,0.5);
+
+        }
+
+        .hms{font-size:34px ; font-weight: bold;}
+        .date{font-size: 23px;}
+        .ampm{font-size: 20px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+       <h2>clockk</h2> 
+
+       <span class="hms"></span>
+       <span class="ampm"></span>
+       <span class="date"></span>
+
+       <h3 class="day"></h3>
+    </div>
+
+    <script>
+        function updateTime(){
+
+            var dateInfo= new Date();
+
+            var hour = dateInfo.getHours();
+            var min= dateInfo.getMinutes();
+            var sec= dateInfo.getSeconds();
+
+
+
+
+            var ampm= (dateInfo.getHours() >= 12) ? "PM" :"AM";
+
+            if(hour==0){hour=12;}
+            else if(hour>12){hour=hour-12;}
+            else{hour=hour}
+             var currTime= hour+ ":" + min + ":" + sec ;
+
+            document.getElementsByClassName('hms')[0].innerHTML= currTime;
+            document.getElementsByClassName('ampm')[0].innerHTML= ampm;
+        
+
+ var days=[
+     
+         "snday",
+         "monday",
+         "teusday",
+         "wednsday",
+         "thursday",
+         "friday",
+         "saturday"
+     
+ ], 
+ months=[
+       "january",
+       "february" ,
+       "march",
+       "april",
+       "may",
+       "june",
+       "july",
+       "magust",
+       "sep",
+       "oct",
+       "nov",
+       "dec"
+       
+ ],
+
+   date = dateInfo.getDate();
+   day=days[dateInfo.getDay()] ; 
+ 
+   month= months[dateInfo.getMonth()] ;
+   currDate= day+ ", " + month + " " + date;
+   
+   document.getElementsByClassName('day')[0].innerHTML=currDate;
+};
+
+updateTime();
+ setInterval(function(){
+     updateTime();
+ }, 1000);
+
+    </script>
+</body>
+</html>

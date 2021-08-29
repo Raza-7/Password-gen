@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .sector1{width: 75px; background-color: red;}
+        .sector2{width: 75px; background-color:green;}
+        .sector3{width: 75px; background-color:blue;}
+    </style>
+</head>
+<body>
+<div class="sector1">s1</div>
+<div class="sector2">s2</div>
+<div class="sector3">s3</div>
+    <script>
+
+     let divs=  document.querySelectorAll('div');
+    // //   divs.forEach(div =>{
+          document.addEventListener('click', e=>{
+        //    if(e.target.matches('div') )
+             { console.log('hlo')}
+          } )
+    //   })
+      const newDiv=document.createElement('div');
+      newDiv.style.width='200px';
+      newDiv.style.height='200px';
+      newDiv.style.backgroundColor='gray';
+      document.body.append(newDiv);
+
+
+    //   newDiv.addEventListener('click',()=>{
+    //       console.log('hi newdiv')
+    //   } )
+
+    //   divs.forEach(div =>{
+    //       div.addEventListener('click', ()=>{
+    //           console.log("clicked..")
+    //       })
+    //   })
+
+    </script>
+    <nav>
+        <ul>
+            <a href="http://">home</a>
+            <a href="http://">signup</a>
+            <a href="index.html">login</a>
+            <a href="http://">about</a>
+        </ul>
+    </nav>
+    <div class="form"  id="form" >
+        <form action="welcome.html" method="post">
+        name : <input type="text"  ><br>
+        password : <input type="password">
+    </form>
+   
+    </div>
+    <button id="btn" onclick="click()">not now</button>
+</body>
+</html>

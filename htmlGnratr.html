@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html generator</title>
+</head>
+<body>
+    <div class="cont">
+        <label for="title" class="title">title</label>
+        <input type="text" id="title" name="title">
+
+        <label for="url" class="url">URL</label>
+        <input type="url" id="url" name="url">
+
+        <label for="tag" class="tag">Tag</label>
+        <input type="text" id="tag" name="tag">
+        <button type="submit" id="submit">generate</button>
+  
+        <div class="res">
+            <textarea class="res-text" id="" cols="30" rows="15"></textarea>
+            <button class="copy-btn">copy</button>
+            <script>
+                let title=document.querySelector('#title')
+
+                let url=document.querySelector('#url')
+                let tag=document.querySelector('#tag')
+                let reslt=document.querySelector('.res-text')
+
+                function generate(title,url,tag){
+                    let final_string= `<a herf="${url}"> <div class="link">
+                    <div class"banner">${tag} </div> ${title}</div></a>`;
+                    reslt.value=final_string;
+                }
+
+                let submt_btn=document.querySelector('#submit');
+                submt_btn.addEventListener('click',()=>{
+                    generate(title.value,url.value,tag.value)
+
+                    title.value="";
+                    url.value="";
+                    tag.value="";
+                });
+
+                let copy=document.querySelector('.copy-btn');
+                cpy.addEventListener('click',()=>{
+                    cpy();
+                })
+                function cpy(){
+                    reslt.select();
+                    document.execCommand('copy');
+                    
+                }
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>

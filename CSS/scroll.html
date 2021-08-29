@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        *{margin: 0; box-sizing: border-box;}
+        section{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+            font-size: 23px;
+            font-weight: bold;
+            color: whitesmoke;
+           scroll-snap-align: start;
+        }
+        .wrap{
+            
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll; 
+        height: 100vh;
+        
+        }
+         .green{background-color:darkgreen;}
+         .blue{background-color: lightskyblue;}
+         .gray{background-color: lightslategray;}
+         .yello{background-color: rgb(250, 250, 20);}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <section class=" green">green sector</section>
+    <section class=" blue">blue sector</section>
+    <section class=" yello">yellow sector</section>
+    
+    <section class=" gray">gray sector</section>
+</div>
+</body>
+</html>

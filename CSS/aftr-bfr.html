@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{position: relative;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        background-color: #ffacb0;
+        display: flex;
+        justify-content: space-between;
+        }
+        div::before{
+
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        background-color:#ffacb0;
+
+        }
+        
+        div::after{
+content: '';
+position: absolute;
+top: -50px;
+right: -50px;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+background-color:#ffacb0;
+
+}
+.cir{ 
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: 1;
+}
+    </style>
+    
+</head>
+<body>
+    <div>
+        <section class="cir"></section>
+        <section class="cir"></section>
+    </div>
+</body>
+</html>

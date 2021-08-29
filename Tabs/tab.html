@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+</head>
+<body><div class="container">
+    <div class="tab">
+        <ul>
+            <button class="trigger " data-target="#about">about</button>
+            <button class="trigger " data-target="#about">contact</button>
+            <button class="trigger active" data-target="#home">home</button>
+
+        </ul>
+        <div id="home" class="content active"></div>
+        <h2>home</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, incidunt minima sit repellat porro sunt blanditiis doloribus maxime quod ducimus pariatur eius mollitia praesentium voluptates, laboriosam cum eligendi! Quas, voluptatibus!
+
+        </p>
+    </div>
+</div>
+    <script>
+        window.addEventListener('Domloaded',initApp);
+        function initApp(){
+
+        }
+        class Tabs{
+            constructor(container){
+                this.container=container;
+            }
+        }
+        var i = 1;
+for (;i<4;){
+  i = i + 1;
+  console.log(i)
+}
+console.log(i)
+
+
+    </script>
+</body>
+</html>
